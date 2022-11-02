@@ -1,81 +1,164 @@
-import imaplib
-import base64
-import os
 import email
-from mailclassdata import EmailRead
+import imaplib
 
-email_user = 'ali.gokkaya@nextalp.com'
-email_pass = 'uF@3b7v73'
+class Reademail():
+    def __init__(self,user = 'ali.gokkaya@nextalp.com',email_pass = 'uF@3b7v73'):
+        self.user=user
+        self.email_pass=email_pass
+        self.mail = imaplib.IMAP4_SSL('imap.nextalp.com',993)
+        self.mail.login(self.user, self.email_pass)
+        _, self.messages = self.mail.select('INBOX')
+        # _, self.selected_mails = self.mail.search(None, '(FROM "info@nextalp.com")')
+        _, self.selected_mails = self.mail.search(None, 'ALL')
+        self.messages = int(self.messages[0])
+class AXA(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+        for i in self.selected_mails[0].split():
+            _, msg = self.mail.fetch(i, "(RFC822)")
+            for response in msg:
+                if isinstance(response, tuple):
+                    msg = email.message_from_bytes(response[1])
+                    self.subject = msg["Subject"]
+                    if self.subject.find('AXA')>=0:
+                        self.sender = msg["From"]
+                        self.body = ""
+                        temp = msg
+                        if temp.is_multipart():
+                            for part in temp.walk():
+                                ctype = part.get_content_type()
+                                cdispo = str(part.get('Content-Disposition'))
+                                if ctype == 'text/plain' and 'attachment' not in cdispo:
+                                    self.body = part.get_payload(decode=True)  # decode
+                                    break
+                        else:
+                            self.body = temp.get_payload(decode=True)
 
-imap = imaplib.IMAP4_SSL('amun.ch-dns.net', 993)
-imap.login(email_user, email_pass)
-imap.select("INBOX")
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
 
-_, selected_mails = imap.search(None, '(FROM "info@nextalp.com")')
-#_, selected_mails = imap.search(None, 'ALL')
+class KoGu(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+        for i in self.selected_mails[0].split():
+                _, msg = self.mail.fetch(i, "(RFC822)")
+                for response in msg:
+                    if isinstance(response, tuple):
+                        msg = email.message_from_bytes(response[1])
+                        self.subject = msg["Subject"]
+                        if self.subject.find('KoGu')>=0:
+                            self.sender = msg["From"]
+                            
+                            self.body = ""
+                            temp = msg
+                            if temp.is_multipart():
+                                for part in temp.walk():
+                                    ctype = part.get_content_type()
+                                    cdispo = str(part.get('Content-Disposition'))
+                                    if ctype == 'text/plain' and 'attachment' not in cdispo:
+                                        self.body = part.get_payload(decode=True)  # decode
+                                        break
+                            else:
+                                self.body = temp.get_payload(decode=True)
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class DLC(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class Medical(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class Mobi24(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class Zurih(Reademail):
+    def __init__(self) -> None:
+        super().__init__()
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
 
 
-def arraydata(array):
-    email_data=[]
-    for i in array:
-        if len(i)>0:
-            email_data.append(i)
-    return email_data
 
-print("Total Messages:" , len(selected_mails[0].split()))
+read=AXA()
+# read.getName()
 
-for num in selected_mails[0].split():
-    _, data = imap.fetch(num , '(RFC822)')
-    _, bytes_data = data[0]
-    email_message = email.message_from_bytes(bytes_data)
-    # print("\n===========================================")
-    # # print(email_message)
-    # print("Subject: ",email_message["subject"])
-    # print("To:", email_message["to"])
-    # print("From: ",email_message["from"])
-    # print("Date: ",email_message["date"])
+print(read.getName())
+        
+# def read_email_from_gmail():
+#     user = 'ali.gokkaya@nextalp.com'
+#     email_pass = 'uF@3b7v73'
+#     mail = imaplib.IMAP4_SSL('imap.nextalp.com',993)
+#     mail.login(user, email_pass)
+#     res, messages = mail.select('INBOX')
+#     _, selected_mails = mail.search(None, '(FROM "info@nextalp.com")')
+#     messages = int(messages[0])
+#     for i in selected_mails[0].split():
+#         # RFC822 protocol
+#         _, msg = mail.fetch(i, "(RFC822)")
+#         for response in msg:
+#             if isinstance(response, tuple):
+#                 msg = email.message_from_bytes(response[1])
+#                 # Store the senders email
+#                 sender = msg["From"]
+#                 # Store subject of the email
+#                 subject = msg["Subject"]
+#                 # Store Body
+#                 body = ""
+#                 temp = msg
+#                 if temp.is_multipart():
+#                     for part in temp.walk():
+#                         ctype = part.get_content_type()
+#                         cdispo = str(part.get('Content-Disposition'))
 
-    for part in email_message.walk():
-        if part.get_content_type()=="text/plain" or part.get_content_type()=="text/html":
-            message = part.get_payload(decode=True)
-            # print("Message:",message.decode('latin-1'))
-            # print("==========================================\n")
-            
-            if email_message["subject"].find('KoGu Transport')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                print(data.KoGu())
-            if email_message["subject"].find('Medicall')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.Medicall()
-            if email_message["subject"].find('DLC')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.DLC()
-            if email_message["subject"].find('Mobi24')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.Mobi24()
-            if email_message["subject"].find('Zurih')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.Zurih()
-            if email_message["subject"].find('AXA')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.AXA()
-            if email_message["subject"].find('Technostore')>=0:
-                data=message.decode('latin-1').split("\r\n")
-                email_data=arraydata(data)
-                data=EmailRead(email_data)
-                data.Technostore()
-            break
-#
-#https://medium.com/@sdoshi579/to-read-emails-and-download-attachments-in-python-6d7d6b60269
+#                         # skip text/plain type
+#                         if ctype == 'text/plain' and 'attachment' not in cdispo:
+#                             body = part.get_payload(decode=True)  # decode
+#                             break
+#                 else:
+#                     body = temp.get_payload(decode=True)
+
+#                 # Print Sender, Subject, Body
+#                 print("-"*50)  # To divide the messages
+#                 print("From    : ", sender)
+#                 print("Subject : ", subject)
+#                 print("Body    : ", body.decode('latin-1'))
+
+#     mail.close()
+#     mail.logout()
+
+
+# read_email_from_gmail()
