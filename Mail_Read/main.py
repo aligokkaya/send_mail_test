@@ -1,7 +1,37 @@
 import email
 import imaplib
+from pdfminer3.layout import LAParams, LTTextBox
+from pdfminer3.pdfpage import PDFPage
+from pdfminer3.pdfinterp import PDFResourceManager
+from pdfminer3.pdfinterp import PDFPageInterpreter
+from pdfminer3.converter import PDFPageAggregator
+from pdfminer3.converter import TextConverter
+import io
 
-class Reademail():
+
+class ReadPDF():
+    
+    def __init__(self):
+        resource_manager = PDFResourceManager()
+        fake_file_handle = io.StringIO()
+        converter = TextConverter(resource_manager, fake_file_handle, laparams=LAParams())
+        page_interpreter = PDFPageInterpreter(resource_manager, converter)
+        with open('1084280.pdf', 'rb') as fh:
+            for page in PDFPage.get_pages(fh,
+                                        caching=True,
+                                        check_extractable=True):
+                page_interpreter.process_page(page)
+
+            text = fake_file_handle.getvalue()
+        converter.close()
+        fake_file_handle.close()
+
+        print(text)
+        
+
+class RequestManager():
+    body=''
+
     def __init__(self,tip,user = 'ali.gokkaya@nextalp.com',email_pass = 'uF@3b7v73'):
         self.user=user
         self.email_pass=email_pass
@@ -12,6 +42,8 @@ class Reademail():
         # _, self.selected_mails = self.mail.search(None, '(FROM "info@nextalp.com")')
         _, self.selected_mails = self.mail.search(None, 'ALL')
         self.messages = int(self.messages[0])
+        
+    def readEmailContent(self):
         for i in self.selected_mails[0].split():
             _, msg = self.mail.fetch(i, "(RFC822)")
             for response in msg:
@@ -31,10 +63,39 @@ class Reademail():
                                     break
                         else:
                             self.body = temp.get_payload(decode=True)
-class AXA(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
+    def reademailPDF():
+        return 'ok'
+    
+
+
+class AXA(RequestManager):
+    def __init__(self) -> None:
+        
+        super().__init__(tip='AXA')
+    def getMessage(self):
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class KoGu(RequestManager):
+    def __init__(self) -> None:
+        
+        super().__init__(tip='KoGu')
+        
+    def getMessage(self):
+        json_data={}
+
+        return self.body.decode('latin-1')
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
+
+class DLC(RequestManager):
+    def __init__(self) -> None:
+        super().__init__(tip='DLC')
         
     def getMessage(self):
         return self.body.decode('latin-1')
@@ -43,10 +104,9 @@ class AXA(Reademail):
     def getSubject(self):
         return self.sender
 
-class KoGu(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
+class Medical(RequestManager):
+    def __init__(self) -> None:
+        super().__init__(tip='Medical')
         
     def getMessage(self):
         return self.body.decode('latin-1')
@@ -55,10 +115,10 @@ class KoGu(Reademail):
     def getSubject(self):
         return self.sender
 
-class DLC(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
+class Mobi24(RequestManager):
+    def __init__(self) -> None:
+        
+        super().__init__(tip='Mobi24')
         
     def getMessage(self):
         return self.body.decode('latin-1')
@@ -67,34 +127,10 @@ class DLC(Reademail):
     def getSubject(self):
         return self.sender
 
-class Medical(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
+class Zurih(RequestManager):
+    def __init__(self) -> None:
         
-    def getMessage(self):
-        return self.body.decode('latin-1')
-    def getName(self):
-        return self.subject
-    def getSubject(self):
-        return self.sender
-
-class Mobi24(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
-        
-    def getMessage(self):
-        return self.body.decode('latin-1')
-    def getName(self):
-        return self.subject
-    def getSubject(self):
-        return self.sender
-
-class Zurih(Reademail):
-    def __init__(self,tip) -> None:
-        self.tip=tip
-        super().__init__(self.tip)
+        super().__init__(tip='Zurih')
         
     def getMessage(self):
         return self.body.decode('latin-1')
@@ -105,10 +141,15 @@ class Zurih(Reademail):
 
 
 
-read=AXA('AXA')
-# read.getName()
+# read=AXA('AXA')
 
-print(read.getName())
+# # read.getName()
+
+# print(read.getName())
+
+read= KoGu()
+print(read.getMessage())
+
         
 # def read_email_from_gmail():
 #     user = 'ali.gokkaya@nextalp.com'
