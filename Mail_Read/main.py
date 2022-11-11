@@ -8,6 +8,17 @@ from pdfminer3.converter import TextConverter
 import io
 
 
+def Message(data):
+    json_data={}
+    arr=[]
+    for i in range(len(data)):
+            try:
+                if len(data[i])!=0:
+                    arr.append(data[i])
+            except:
+                pass
+    json_data['message']=arr
+    return json_data['message']
 class ReadPDF():
     
     def __init__(self,file):
@@ -34,13 +45,9 @@ class ReadPDF():
         # print(self.text)
         return self.text
     def getText(self):
-        return self.text
-    
-        
+        return self.text       
 class RequestManager():
-    body=''
-
-    def __init__(self,tip,user = 'ali.gokkaya@nextalp.com',email_pass = 'uF@3b7v73'):
+    def __init__(self,tip,user ='ali.gokkaya@nextalp.com',email_pass = 'uF@3b7v73'):
         self.user=user
         self.email_pass=email_pass
         self.tip=tip
@@ -50,7 +57,7 @@ class RequestManager():
         # _, self.selected_mails = self.mail.search(None, '(FROM "info@nextalp.com")')
         _, self.selected_mails = self.mail.search(None, 'ALL')
         self.messages = int(self.messages[0])
-        
+        self.readEmailContent()
     def readEmailContent(self):
         for i in self.selected_mails[0].split():
             _, msg = self.mail.fetch(i, "(RFC822)")
@@ -74,24 +81,105 @@ class RequestManager():
     
 class AXA(RequestManager):
     def __init__(self) -> None:
-        
         super().__init__(tip='AXA')
+
+    
     def getMessage(self):
-        return self.body.decode('latin-1')
+        self.data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(self.data)    
+        return json_data
+
     def getName(self):
-        return self.subject
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i].find('prénom')>=0:
+                json_data['prenom']=str(data[i])[40:]
+            if data[i].find(' nom ')>=0:
+                json_data['nom']=str(data[i])[40:]
+        # print(data)
+        return json_data
     def getSubject(self):
         return self.sender
 
-class KoGu(RequestManager):
-    def __init__(self) -> None:
-        
-        super().__init__(tip='KoGu')
-        
-    def getMessage(self):
+    def getAdress(self):
         json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i].find('lieu')>=0:
+                json_data['lieu']=str(data[i])[40:]
+            if data[i].find('adresse')>=0:
+                json_data['adresse']=str(data[i])[40:]
+            if data[i].find('pays')>=0:
+                json_data['pays']=str(data[i])[40:]
+            if data[i].find('localité de panne')>=0:
+                json_data['localite de panne']=str(data[i])[40:]
+        return json_data
 
-        return self.body.decode('latin-1')
+    def getTel(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i].find('téléphone')>=0:
+                json_data['tel']=str(data[i])[40:]
+        return json_data
+
+    def getOrdre(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i].find('assureur')>=0:
+                json_data['assureur']=str(data[i])[40:]
+            if data[i].find('  mandant ')>=0:
+                json_data['mandant']=str(data[i])[32:]
+            if data[i].find('numéro de dossie')>=0:
+                json_data['numero_de_dossie']=str(data[i])[40:]
+            if data[i].find('numéro dordre')>=0:
+                json_data['numero_dordre']=str(data[i])[40:]
+            if data[i].find('type dordre')>=0:
+                json_data['type_dordre']=str(data[i])[40:]
+            if data[i].find('   couverture')>=0:
+                json_data['couverture']=str(data[i])[40:]
+            if data[i].find('partenaire')>=0:
+                json_data['partenaire']=str(data[i])[40:]
+            if data[i].find('montant de facturation')>=0:
+                json_data['montant_de_facturation']=str(data[i])[40:]
+
+        return json_data
+
+class KoGu_Transport(RequestManager):
+    def __init__(self) -> None:
+        super().__init__(tip='KoGu Transport')
+    
+    def getData(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i]=='Personne responsable':
+                json_data['Personne responsable']=data[i+1]
+            if data[i]=='Téléphone':
+                json_data['Tel']=data[i+1]
+            if data[i]=='Votre téléphone':
+                json_data['Votre_Tel']=data[i+1]
+            if data[i]=='Somme':
+                json_data['Somme']=data[i+1]
+
+        return json_data
+
+    def getMessage(self):
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
     def getName(self):
         return self.subject
     def getSubject(self):
@@ -102,7 +190,9 @@ class DLC(RequestManager,ReadPDF):
         super().__init__(tip='DLC')
         ReadPDF.__init__(self,file='1084280.pdf')
     def getMessage(self):
-        return self.body.decode('latin-1')
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
     def getName(self):
         return self.subject
     def getSubject(self):
@@ -112,8 +202,32 @@ class Medical(RequestManager):
     def __init__(self) -> None:
         super().__init__(tip='Medical')
         
+    def getData(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i]=='Personne responsable':
+                json_data['Personne responsable']=data[i+1]
+            if data[i]=='Téléphone':
+                json_data['Tel']=data[i+1]
+            if data[i]=='Votre téléphone':
+                json_data['Votre_Tel']=data[i+1]
+            if data[i]=='Somme':
+                json_data['Somme']=data[i+1]
+
+        return json_data
+        # print(data)
+        # for i in range(len(data)):
+        #     if data[i].find('lieu')>=0:
+        #         json_data['lieu']=str(data[i])[40:]
+
+
     def getMessage(self):
-        return self.body.decode('latin-1')
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
     def getName(self):
         return self.subject
     def getSubject(self):
@@ -125,30 +239,50 @@ class Mobi24(RequestManager):
         super().__init__(tip='Mobi24')
         
     def getMessage(self):
-        return self.body.decode('latin-1')
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
     def getName(self):
         return self.subject
+    def mesaj(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i].find('Interlocuteur:')>=0:
+                print(data[i])
+                json_data['Interlocuteur']=str(data[i])[14:]
+        return json_data
     def getSubject(self):
         return self.sender
 
 class Zurih(RequestManager):
     def __init__(self) -> None:
         
-        super().__init__(tip='Zurih')
+        super().__init__(tip='Zurich')
         
     def getMessage(self):
-        return self.body.decode('latin-1')
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
     def getName(self):
         return self.subject
+    def mesaj(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        for i in range(len(data)):
+            if data[i].find('Personne de contact:')>=0:
+                json_data['Personne de contact']=str(data[i])[23:]
+            if data[i].find('CHF')>=0:
+                print(data[i])
+                json_data['CHF']=str(data[i])[120:129]
+        return json_data
     def getSubject(self):
         return self.sender
 
 
-read= DLC()
-read.getTel()
+read= Zurih()
+print(read.mesaj())
 
-
-
-
-
-  
