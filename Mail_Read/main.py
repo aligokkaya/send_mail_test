@@ -185,6 +185,36 @@ class KoGu_Transport(RequestManager):
     def getSubject(self):
         return self.sender
 
+
+class KoGu_Pannen(RequestManager):
+    def __init__(self) -> None:
+        super().__init__(tip='KoGu Pannendienst')
+    
+    def getData(self):
+        json_data={}
+        self.data=self.body.decode('latin-1').split('\r\n')
+        data=Message(self.data)
+        # print(data)
+        for i in range(len(data)):
+            if data[i]=='Personne responsable':
+                json_data['Personne responsable']=data[i+1]
+            if data[i]=='Téléphone':
+                json_data['Tel']=data[i+1]
+            if data[i]=='Votre téléphone':
+                json_data['Votre_Tel']=data[i+1]
+            if data[i]=='Somme':
+                json_data['Somme']=data[i+1]
+
+        return json_data
+
+    def getMessage(self):
+        data=self.body.decode('latin-1').split('\r\n')
+        json_data=Message(data)    
+        return json_data
+    def getName(self):
+        return self.subject
+    def getSubject(self):
+        return self.sender
 class DLC(RequestManager,ReadPDF):
     def __init__(self) -> None:
         super().__init__(tip='DLC')
@@ -218,12 +248,6 @@ class Medical(RequestManager):
                 json_data['Somme']=data[i+1]
 
         return json_data
-        # print(data)
-        # for i in range(len(data)):
-        #     if data[i].find('lieu')>=0:
-        #         json_data['lieu']=str(data[i])[40:]
-
-
     def getMessage(self):
         data=self.body.decode('latin-1').split('\r\n')
         json_data=Message(data)    
@@ -268,7 +292,7 @@ class Zurih(RequestManager):
         return json_data
     def getName(self):
         return self.subject
-    def mesaj(self):
+    def getData(self):
         json_data={}
         self.data=self.body.decode('latin-1').split('\r\n')
         data=Message(self.data)
@@ -283,6 +307,6 @@ class Zurih(RequestManager):
         return self.sender
 
 
-read= Zurih()
-print(read.mesaj())
+read= KoGu_Pannen()
+print(read.getData())
 
