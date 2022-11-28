@@ -1,0 +1,1815 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+
+<!-- Mirrored from islamic-relief.ch/donation/index.php?lg=de by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Nov 2022 21:49:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PZNHCQZ');
+	</script>
+	<!-- End Google Tag Manager -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	<title>Spenden |Islamic Relief</title>
+	<link rel="shortcut icon" href="static/Public/Images/Favicon.png" type="image/png">
+	<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel=" stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/solid.css" integrity="sha384-g2aKxiZcFezoVOq4MsjaxuBbSxSlXD/NRQ5GaPLfvCtcTLgP3fYZKKAGxCM/wMfe" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/fontawesome.css" integrity="sha384-xdTUmhbcetyLRVL4PAriRajOve+/5pjOiy5sJABnhXMcRMVc9HI9s2KmOCjjDK/P" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+	<link href="static/Public/CSS/52476ca9f1b7902816ce8f7d91a9ee4d19fd2757__style.css" rel="stylesheet">
+	<link href="static/Public/CSS/style-fa.css" rel="stylesheet">
+	<script type="text/Javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script type="text/Javascript" src="/static/Public/JavaScript/Panier.js"></script>
+	<script type="text/Javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+		<!--BLOCK HEADER -->
+	<header class="fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-5 col-xs-9">
+					<!--Logo -->
+					<a href="index3de7.html?lg=de">
+						<img src="/static/Public/Images/Logosuissede.png" width="200" height="70" alt="*">
+					</a>
+					<!--fin logo -->
+				</div>
+				<div class="col-md-8 col-sm-7 col-xs-3">
+					<!--entête caddie -->
+					<div class="enteteCaddie">
+						<nav class="navbar navbar-default">
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown first last">
+										<a href="javascript:void(0);" class="dropdown-toggle" id="btnCaddie">
+											<span class="bnum"><span id="nbArticles">0</span></span>
+											<i class="fa fa-angle-down"></i>
+										</a>
+										<!-- boutton langue -->
+										<a href="javascript:void(0);" class="dropdown-toggle" id="btnLangue">
+											<span class="langueAbrev"><span id="nbArticles">DE</span></span>
+											<i class="fa fa-angle-down"></i>
+										</a>
+										<!-- liste langue -->
+										<ul class="dropdown-menu langues" id="switchLang">
+											<div class="langues">
+												<!--titre caddie -->
+																									<a href="index3de7.html?lg=de" class="langLink currLang">
+														DE													</a>
+													<br>
+																									<a href="index1483.html?lg=fr" class="langLink ">
+														FR													</a>
+													<br>
+																									<a href="indexbd76.html?lg=it" class="langLink ">
+														IT													</a>
+													<br>
+																							</div>
+
+										</ul>
+
+										<!-- switch langues  -->
+
+
+
+										<!-- fin switch langues  -->
+										<!--CADDIE -->
+										<ul class="dropdown-menu" id="caddieAjout">
+											<div class="caddie">
+												<!--titre caddie -->
+												<h4> Meine Spende </h4>
+												<table id="liste_articles" class="table">
+													<tbody>
+														<!--ligne don -->
+														<tr id="articleModel" class="articleModel">
+															<!--image don -->
+															<td class="caddieImg ">
+																<img src="static/Public/Images/don.jpg">
+															</td>
+															<!--fin image don -->
+															<!--texte don -->
+															<td class="textDon" colspan=2></td>
+															<!--montant don -->
+															<td class="montantArticle ">
+																<span id="montantArticleSpan"></span>
+																<span> CHF																</span>
+															</td>
+															<!--fin montant don -->
+															<!--icone supprimer -->
+															<td class="suppressionIcon">
+																<a href="javascript:void(0)" id="suppressionId" class="">
+																	<i class="fa fa-trash"></i></a>
+															</td>
+															<!--fin icone supprimer -->
+														</tr>
+														<!--fin ligne don -->
+														<!--ligne total -->
+														<tr class="last">
+															<td class="basTotal" colspan=3> Total </td>
+															<td colspan=2>
+																<span id="total"></span>
+																<span>CHF </span>
+															</td>
+														</tr>
+														<!--fin ligne total -->
+													</tbody>
+												</table>
+
+											</div>
+											<!--caddie vide -->
+											<div class="caddieVide">
+												<h5>Dein Korb ist leer!</h5>
+												<p> Durchsuchen Sie die Website und machen Sie eine Spende jetzt. </p>
+											</div>
+											<!--fin caddie vide -->
+										</ul>
+										<!--FIN CADDIE -->
+									</li>
+
+								</ul>
+							</div>
+						</nav>
+					</div>
+					<!--fin entête caddie -->
+					<!--block aide -->
+					<div class="aide d-none d-md-block">
+						<p>Benötigen Sie Hilfe?						</p>
+						<h3>
+							<a class="text-white" href="mailto:contact@islamic-relief.ch">
+								contact@islamic-relief.ch							</a>
+							- 022 73 202 73						</h3>
+					</div>
+					<!--fin block aide -->
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--fin BLOCK HEADER -->
+	<!--BLOCK SECTION ENTETE -->
+	<section class="sectionDonation" style="background: url('static/Public/Images/Donation-banner.jpg') no-repeat center center; background-size: cover;">
+		<div class="container">
+			<h1> Ihre Spende rettet Leben </h1>
+		</div>
+	</section>
+	<!--fin BLOCK SECTION ENTETE -->
+	<!--BLOCK ETAPES DONATION -->
+	<section class="sectionEtapes">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 offset-md-1">
+					<div class="etapeDon">
+						<!--début Messages d'informations donateur  -->
+						<!--fin Messages d'informations donateur  -->
+						<!-- Messages d'incompatibilité navigateur  -->
+						
+						<!--fin Messages d'incompatibilité navigateur  -->
+
+						<!-- fil d'ariane -->
+						<div class="mt-4">
+
+							<ul class="nav nav-tabs filariane" id="myTab" role="tablist">
+								<li class="nav-item">
+									<div class="progress ">
+										<div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<a class="nav-link text-center" id="choixDon-tab" data-toggle="tab" href="#choixDon" role="tab" aria-controls="choixDon" aria-selected="true">
+										<span class="badge badge-pill badge-light mb-1 p-2">
+											<p>1</p>
+										</span>
+										<span class="d-none d-sm-block"> Häufigkeit der Spende</span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<div class="progress ">
+										<div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<a class="nav-link disabled text-center" id="cause-tab" data-toggle="tab" href="#cause" role="tab" aria-controls="profile" aria-selected="false">
+										<span class="badge badge-pill badge-light mb-1 p-2">
+											<p>2</p>
+										</span>
+										<span class="d-none d-sm-block"> Zweck der Spende</span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<div class="progress ">
+										<div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<a class="nav-link disabled text-center" id="informations-tab" data-toggle="tab" href="#informations" role="tab" aria-controls="informations" aria-selected="false">
+										<span class="badge badge-pill badge-light mb-1 p-2">
+											<p>3</p>
+										</span>
+										<span class="d-none d-sm-block"> Kontaktdaten</span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link disabled text-center" id="paiement-tab" data-toggle="tab" href="#paiement" role="tab" aria-controls="contact" aria-selected="false">
+										<span class="badge badge-pill badge-light mb-1 p-2">
+											<p>4</p>
+										</span>
+										<span class="d-none d-sm-block"> Zahlungsmittel</span>
+									</a>
+								</li>
+
+							</ul>
+
+
+							<div class="tab-content" id="etapesContent">
+								<div class="tab-pane fade show active" id="choixDon" role="tabpanel" aria-labelledby="choixDon-tab">
+									<!-- -------------------------------------------->
+									<!--               1- CHOIX TYPE DE DON 	   -->
+									<!-- -------------------------------------------->
+									<div id="choixTypeDon" class="pt-5">
+										<!--Lien BVR -->
+										<a class="bvr mt-5" href="https://google.com/" target="__blanc">
+											Ich möchte per Einzahlungsschein oder per Überweisung bezahlen										</a>
+										<!--fin Lien BVR -->
+										<!-- Texte -->
+										<h3 id="titreDonH3">
+											<span class="icon-num">1</span> Ich spende										</h3>
+										<!-- Fin Texte -->
+										<!-- Boutons -->
+										<div class="btnsPP text-center">
+											<!--  don unitaire -->
+											<input type="radio" id="btnUnitaire" class="choixTypeDonRadio">
+											<label for="btnUnitaire" class="btnRadio labelChoixDon " id="btnUnitaire">
+												<b>Heute</b>
+											</label>
+											<!--  don récurrent -->
+											<input type="radio" id="btnRecurrent" class="choixTypeDonRadio">
+											<label for="btnRecurrent" class="btnRadio labelChoixDon " id="btnRecurrent">
+												<b>Monatlich</b>
+											</label>
+										</div>
+									</div>
+									<!-- Boutons -->
+									<div class="row justify-content-center">
+										<!-- Bouton Suivant -->
+										<div class="col-12 mt-3">
+											<a href="javascript:void(0);" class="btnSuivant btn hide btn-large" id="suivantTypeDon">
+												<span> Weiter</span>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</div>
+										<!-- Fin boutons -->
+									</div>
+								</div>
+								<!-- -------------------------------------------->
+								<!--               FIN CHOIX TYPE DE DON 	   -->
+								<!-- -------------------------------------------->
+								<!-- -------------------------------------------->
+								<!--                CHOIX DON			   	   -->
+								<!-- -------------------------------------------->
+								<div class="tab-pane fade" id="cause" role="tabpanel" aria-labelledby="cause-tab">
+									<!-- -------------------------------------------->
+									<!--      		 DON UNITAIRE  				-->
+									<!-- -------------------------------------------->
+									<div id="donUnitaire">
+										<!-- Texte choix projet -->
+										<h3 id="titreDonH3" class="titreDonH3">
+											<span class="icon-num">2</span> Ich spende für ein/mehrere Projekt/e										</h3>
+										<!-- Fin Texte choix projet -->
+
+										<!-- Projets phares -->
+										<div class="btnsPP text-center projetListe" id="projetUnitaireId">
+											<h5 id="erreursPP" class="erreurs"> Dieses Feld ist erforderlich * </h5>
+											<!-- Début Bouton kurban -->
+																						<!-- Fin Bouton kurban -->
+
+											<!-- Liste des projets phares param.ini -->
+											<input type="radio" name="projet-phare" id="textePermanant-1" value="Zakat el Maal" class="projetRadio" alt="Zakat el Maal">
+												<label for="textePermanant-1" class="btnRadio projetLabel textePermanant-1 ">
+																Zakat el Maal
+												<label>
+											<input type="radio" name="projet-phare" id="texteUrgence-5" value="Überschwemmung Pakistan" class="projetRadio" alt="Überschwemmung Pakistan">
+												<label for="texteUrgence-5" class="btnRadio projetLabel texteUrgence-5 ">
+													Überschwemmung Pakistan	
+												</label>
+											<input type="radio" name="projet-phare" id="textePermanant-4" value="Wasser und Brunnen" class="projetRadio" alt="Wasser und Brunnen">
+												<label for="textePermanant-4" class="btnRadio projetLabel textePermanant-4 ">
+													Wasser und Brunnen															
+												</label>
+											<input type="radio" name="projet-phare" id="texteUrgence-4" value="Hungersnot" class="projetRadio" alt="Hungersnot">
+												<label for="texteUrgence-4" class="btnRadio projetLabel texteUrgence-4 ">
+													Hungersnot															
+												</label>
+											<input type="radio" name="projet-phare" id="texteOrphelin-1" value="Patenschaft für Waisenkinder" class="projetRadio" alt="Patenschaft für Waisenkinder">
+												<label for="texteOrphelin-1" class="btnRadio projetLabel texteOrphelin-1 ">
+													Patenschaft für Waisenkinder															
+												</label>
+											<input type="radio" name="projet-phare" id="texteUrgence-1" value="Jemen" class="projetRadio" alt="Jemen">
+												<label for="texteUrgence-1" class="btnRadio projetLabel texteUrgence-1 ">
+													Jemen															
+												</label>
+											<input type="radio" name="projet-phare" id="texteOrphelin-3" value="Waisenkasse" class="projetRadio" alt="Waisenkasse">
+												<label for="texteOrphelin-3" class="btnRadio projetLabel texteOrphelin-3 ">
+													Waisenkasse															
+												</label>
+											<input type="radio" name="projet-phare" id="texteUrgence-2" value="Gaza" class="projetRadio" alt="Gaza">
+												<label for="texteUrgence-2" class="btnRadio projetLabel texteUrgence-2 ">
+													Gaza															
+												</label>
+											<input type="radio" name="projet-phare" id="texteUrgence-99" value="Notfallfonds" class="projetRadio" alt="Notfallfonds">
+												<label for="texteUrgence-99" class="btnRadio projetLabel texteUrgence-99 ">
+													Notfallfonds															
+												</label>
+											<input type="radio" name="projet-phare" id="texteUrgence-3" value="Überschwemmung Bangladesh" class="projetRadio" alt="Überschwemmung Bangladesh">
+												<label for="texteUrgence-3" class="btnRadio projetLabel texteUrgence-3 ">
+													Überschwemmung Bangladesh															
+												</label>
+																						<!-- Fin de Liste des projets phares param.ini -->
+											<!-- Btn tous les projets -->
+											<input type="radio" name="projet-phare" id="tousNosProjets" data-toggle="modal" data-target="#modalTousProjets">
+											<label for="tousNosProjets" class="btnRadio tousProjets">Sehen Sie alle unsere Projekte</label>
+											<!-- Fin btn tous les projets -->
+										</div>
+										<!-- Fin projets phares -->
+
+										<!-- Montants phares -->
+										<h5 class="text-center textDonsPhares">Ich mache eine Spende von											<span id="montantDon"></span>
+											<span id="deviseDonPhare" class="hidden">CHF</span></h5>
+										<div class="selectMontant" id="selectMontantId">
+											<h5 id="montantsErreurs" class="erreurs">Dieses Feld ist erforderlich *</h5>
+											<!-- Parcourir la liste de tous les boutons  -->
+																								<input type="radio" name="montant" id="boutonDon-1" class="montantRadio" value="50">
+													<label for="boutonDon-1" class="btnRadio montantLabel boutonDon-1 ">
+														50</label>
+																								<input type="radio" name="montant" id="boutonDon-2" class="montantRadio" value="100">
+													<label for="boutonDon-2" class="btnRadio montantLabel boutonDon-2 ">
+														100</label>
+																								<input type="radio" name="montant" id="boutonDon-3" class="montantRadio" value="150">
+													<label for="boutonDon-3" class="btnRadio montantLabel boutonDon-3 ">
+														150</label>
+																								<input type="radio" name="montant" id="boutonDon-4" class="montantRadio" value="200">
+													<label for="boutonDon-4" class="btnRadio montantLabel boutonDon-4 ">
+														200</label>
+																								<input type="radio" name="montant" id="boutonDon-5" class="montantRadio" value="300">
+													<label for="boutonDon-5" class="btnRadio montantLabel boutonDon-5 ">
+														300</label>
+																						<!-- Montant libre -->
+											<div class="montantEnv"><span> CHF </span>
+												<input type="number" min="1" max="99000" class="form-control input-lg inputMontantPtp montantLibre" id="montantLibre" name="montant" placeholder="Anderer">
+											</div>
+											<!-- Fin montant libre -->
+										</div>
+										<!-- Fin montants phares-->
+									</div>
+									<!-- -------------------------------------------->
+									<!--               DON RECURRENT 			   -->
+									<!-- -------------------------------------------->
+									<div id="donRecurrent">
+										<!-- Texte choix projet -->
+										<h3 id="titreDonH3" class="titreDonH3">
+											<span class="icon-num">2</span> Ich spende <u>JEDEN MONAT</u> für ein/mehrere Projekt/e										</h3>
+										<!-- Fin Texte choix projet -->
+										<!-- Projets récurrents-->
+										<div class="btnsPP text-center projetListe" id="projetRecurrentId">
+											<h5 id="erreursPPRecurrent" class="erreurs"> Dieses Feld ist erforderlich * </h5>
+											<!-- Liste des projets récurrent Recurrent.ini -->
+																										<input type="radio" name="projet-phare" id="texteOrphelin-1" value="Patenschaft für Waisenkinder" class="projetRadio" alt="Patenschaft für Waisenkinder">
+															<label for="texteOrphelin-1" class="btnRadio projetLabel texteOrphelin-1 ">
+																Patenschaft für Waisenkinder															</label>
+																										<input type="radio" name="projet-phare" id="textePermanant-6" value="Opferkasse" class="projetRadio" alt="Opferkasse">
+															<label for="textePermanant-6" class="btnRadio projetLabel textePermanant-6 ">
+																Opferkasse															</label>
+																										<input type="radio" name="projet-phare" id="textePermanant-1" value="Zakat el Maal" class="projetRadio" alt="Zakat el Maal">
+															<label for="textePermanant-1" class="btnRadio projetLabel textePermanant-1 ">
+																Zakat el Maal															</label>
+																										<input type="radio" name="projet-phare" id="textePermanant-2" value="Kurban" class="projetRadio" alt="Kurban">
+															<label for="textePermanant-2" class="btnRadio projetLabel textePermanant-2 ">
+																Kurban															</label>
+																										<input type="radio" name="projet-phare" id="textePermanant-3" value="Waqf" class="projetRadio" alt="Waqf">
+															<label for="textePermanant-3" class="btnRadio projetLabel textePermanant-3 ">
+																Waqf															</label>
+																										<input type="radio" name="projet-phare" id="textePermanant-4" value="Wasser und Brunnen" class="projetRadio" alt="Wasser und Brunnen">
+															<label for="textePermanant-4" class="btnRadio projetLabel textePermanant-4 ">
+																Wasser und Brunnen															</label>
+																										<input type="radio" name="projet-phare" id="texteOrphelin-3" value="Waisenkasse" class="projetRadio" alt="Waisenkasse">
+															<label for="texteOrphelin-3" class="btnRadio projetLabel texteOrphelin-3 ">
+																Waisenkasse															</label>
+																										<input type="radio" name="projet-phare" id="texteUrgence-99" value="Notfallfonds" class="projetRadio" alt="Notfallfonds">
+															<label for="texteUrgence-99" class="btnRadio projetLabel texteUrgence-99 ">
+																Notfallfonds															</label>
+																										<input type="radio" name="projet-phare" id="texteAutre-3" value="Allgemeiner Fond" class="projetRadio" alt="Allgemeiner Fond">
+															<label for="texteAutre-3" class="btnRadio projetLabel texteAutre-3 ">
+																Allgemeiner Fond															</label>
+																					</div>
+										<!-- Fin projets récurrents -->
+										<!-- Montants récurrents -->
+										<h5 class="text-center textDonsPhares">
+											Ich mache eine Spende von											<span id="montantDonRecurrent"></span>
+											<span id="deviseDonRecurrent" class="hidden">
+												CHF											</span>
+										</h5>
+
+										<div class="selectMontant" id="selectMontantRecurrentId">
+											<h5 id="montantsErreursRecurrent" class="erreurs">Dieses Feld ist erforderlich *</h5>
+											<!-- Parcourir la liste de tous les boutons montant-->
+																								<input type="radio" name="montant" id="boutonDon-10" class="montantRadio" value="40">
+													<label for="boutonDon-10" class="btnRadio montantLabel boutonDon-10 ">
+														40</label>
+																								<input type="radio" name="montant" id="boutonDon-11" class="montantRadio" value="50">
+													<label for="boutonDon-11" class="btnRadio montantLabel boutonDon-11 ">
+														50</label>
+																								<input type="radio" name="montant" id="boutonDon-12" class="montantRadio" value="60">
+													<label for="boutonDon-12" class="btnRadio montantLabel boutonDon-12 ">
+														60</label>
+																								<input type="radio" name="montant" id="boutonDon-13" class="montantRadio" value="100">
+													<label for="boutonDon-13" class="btnRadio montantLabel boutonDon-13 ">
+														100</label>
+																						<!-- Montant libre -->
+											<div class="montantEnv"><span> CHF </span>
+												<input type="number" min="1" max="99000" class="form-control input-lg inputMontantPtp montantLibre" id="montantLibre" name="montant" placeholder="Anderer">
+											</div>
+											<!-- Fin montant libre -->
+										</div>
+										<!-- Fin montants récurrents-->
+
+										<!-- Fin bouton valider -->
+									</div>
+									<!-- Boutons -->
+									<div class="row justify-content-end">
+										<!-- Bouton valider -->
+										<div class="btnValider col-12">
+											<a href="javascript:;" class="btn bg-orange btnDonner btn-red btn-large">
+												<span> SPENDE HINZUFÜGEN</span>
+												<!-- <i class="fa fa-angle-right"></i> -->
+											</a>
+										</div>
+										<!-- Bouton Suivant projet -->
+										<div class="col-12 mt-4">
+											<a href="javascript:void(0);" class="btnSuivant hide btn btn-large" id="causeSuivant">
+												<span> Weiter</span>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</div>
+										<!-- Fin boutons -->
+									</div>
+									<p style="font-weight: 800;" id="infosImpots" class="mt-4">
+										Ihre Spende ist steuerlich absetzbar									</p>
+
+								</div>
+								<!-- -------------------------------------------->
+								<!--             FIN CHOIX DON 			       -->
+								<!-- -------------------------------------------->
+								<!-- -------------------------------------------->
+								<!--             ETAPE DONATEUR 			   -->
+								<!-- -------------------------------------------->
+								<div class="tab-pane fade" id="informations" role="tabpanel" aria-labelledby="informations-tab">
+									<div class="etapeDonateur stepWrap clearfix" id="etapeDonateurId">
+										<form method="POST" action="/" name="donateur" id="formDonateur">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12">
+													<h3> <span class="icon-num">3</span> Meine Kontaktdaten</h3>
+												</div>
+											</div>
+											<div class="row justify-content-center" id="formData">
+												<div class="col-md-5 col-sm-12 col-xs-12">
+													<div class="row">
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label>Titel</label>
+																<select class="form-control" id="civilite" name="civilite" tabindex="1">
+																	<option value="Herr und Frau" selected="selected">Herr und Frau</option>
+																	<option value="Herr">Herr</option>
+																	<option value="Frau">Frau</option>
+																	<!--début options supplémentaires pour la langue de -->
+																																			<option value="Familie">Familie</option>
+																		<option value="Gesellschaft">Gesellschaft</option>
+																		<!--fin options supplémentaires pour la langue de -->
+																																	</select>
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="nom">Familienname<span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="text" class="form-control" tabindex="2" id="nom" name="nom" placeholder="" required>
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="prenom">Vorname</label>
+																<input autocomplete="true" type="text" class="form-control" tabindex="3" id="prenom" name="prenom" placeholder="">
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="email">Email <span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="email" class="form-control" tabindex="4" id="email" name="email" placeholder="" required>
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="telephone">Telefon<span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="text" class="form-control" required tabindex="5" id="telephone" name="telephone" placeholder="" pattern="[+]?[ \.\-0-9]+" />
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="natel">Handy<span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="text" class="form-control" required tabindex="6" id="natel" name="natel" placeholder="" pattern="[+]?[ \.\-0-9]+" />
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-5 col-sm-12 col-xs-12">
+													<div class="row">
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="address1">Adresse<span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="text" class="form-control" tabindex="7" id="address1" name="address1" placeholder="" required>
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="address2">Adresse Zusatz</label>
+																<input autocomplete="true" type="text" class="form-control" tabindex="8" id="address2" name="address2" placeholder="">
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="codepostal">PLZ<span class="text-danger"> *</span></label>
+																<input autocomplete="true" type="text" id="txtCplusLookup" tabindex="9" name="codepostal" class="search form-control" placeholder="" required="" pattern="[0-9]+" />
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="ville">Stadt<span class="text-danger"> *</span></label>
+																<input autocomplete="true" name="ville" type="text" tabindex="10" id="ville" class="form-control" required placeholder="" required>
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="pays"> Land </label>
+																<select class="form-control valid" name="pays" id="pays" tabindex="11" aria-invalid="false">
+																	<optgroup> 
+																	<option value="CH">Schweiz</option>
+																	<option value="AT">Österreich</option>
+																	</optgroup>																
+																</select>
+																<input type="hidden" id="langue" name="langue" value="de">
+															</div>
+														</div>
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<div class="form-group">
+																<label for="codedonateur">Kommentar</label>
+																<input autocomplete="true" type="text" name="codedonateur" class="form-control" tabindex="12" id="codedonateur" name="home_no" placeholder="Spender-,Waisenkindnummer,Anderes...">
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Boutons -->
+											</div>
+											<!-- inscription a la newsletter -->
+											<div class="row justify-content-center">
+												<div class="form-check col-10 mt-2 ml-4 text-left">
+													<input class="form-check-input" type="checkbox" value="" id="checkbox-newsletter">
+													<label class="form-check-label" for="defaultCheck1">
+														Ich bin damit einverstanden, die neuesten Nachrichten per E-Mail zu erhalten.													</label>
+
+												</div>
+
+											</div>
+											<div class="row justify-content-center">
+												<!-- Bouton Suivant informations -->
+												<div class="col-12 mt-4">
+													<button type="submit" class="btn btnSuivant btn-large" id="suivantInformations">
+														Weiter														<i class="fa fa-angle-right"></i>
+													</button> </div>
+											</div>
+											
+										</form>
+										<!-- Formulaire newsletter -->
+
+										<form action="https://islamic-relief.us15.list-manage.com/subscribe/post?u=469e406f08f3433beed74ced3&amp;id=c2f0dd29b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+												<!-- civilité -->
+												<input type="hidden" name="MERGE5" id="mce-MERGE5">
+												<!-- nom -->
+												<input type="hidden" value="" name="MERGE2" id="mce-MERGE2" required>
+												<!-- Prénom -->
+												<input type="hidden" value="" name="MERGE1" id="mce-MERGE1" required>
+												<!-- Date de naissance -->
+												<input type="hidden" name="MERGE3" id="MERGE3" required>
+												<!-- Email -->
+												<input type="hidden" value="" name="EMAIL" required id="mce-EMAIL">
+												<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+												<div style="position: absolute; left: -5000px;" aria-hidden="true">
+													<input type="text" name="b_469e406f08f3433beed74ced3_c2f0dd29b8" tabindex="-1" value="">
+												</div>
+
+											</form>
+									</div>
+								</div>
+								<!-- -------------------------------------------->
+								<!--             FIN ETAPE DONATEUR 			   -->
+								<!-- -------------------------------------------->
+								<!-- -------------------------------------------->
+								<!--             ETAPE PAIEMENT 			   -->
+								<!-- -------------------------------------------->
+								<div class="tab-pane fade" id="paiement" role="tabpanel" aria-labelledby="paiement-tab">
+									<!-- Texte Méthode de paiement -->
+									<div class="row justify-content-center mt-5">
+										<div class="mpyenPaiement col-12 col-md-5">
+											<h3 id="titreDonH3Synth" class="titreDonH3">
+												<span class="icon-num">4</span> Ich spende mit											</h3>
+											<div class="btnsPP mb-0 text-center row justify-content-around" id="paiementUnitaireId">
+												<!-- Liste des méthodes de paiement -->
+																											<input type="radio" name="paiement-unitaire" id="methodePaiement-1" value="PostFinance Card" class="paiementRadio" alt="PostFinance Card">
+															<label for="methodePaiement-1" class="btnRadio paiementLabel methodePaiement-1">
+																<img src="static/Public/Images/mp/pfcard.png" class="methodeImg" />
+																PostFinance Card															</label>
+																											<input type="radio" name="paiement-unitaire" id="methodePaiement-2" value="VISA" class="paiementRadio" alt="VISA">
+															<label for="methodePaiement-2" class="btnRadio paiementLabel methodePaiement-2">
+																<img src="static/Public/Images/mp/visa.png" class="methodeImg" />
+																VISA															</label>
+																											<input type="radio" name="paiement-unitaire" id="methodePaiement-3" value="MasterCard" class="paiementRadio" alt="MasterCard">
+															<label for="methodePaiement-3" class="btnRadio paiementLabel methodePaiement-3">
+																<img src="static/Public/Images/mp/mastercard.png" class="methodeImg" />
+																MasterCard															</label>
+																											<input type="radio" name="paiement-unitaire" id="methodePaiement-4" value="PostFinance e-finance" class="paiementRadio" alt="PostFinance e-finance">
+															<label for="methodePaiement-4" class="btnRadio paiementLabel methodePaiement-4">
+																<img src="static/Public/Images/mp/pfefinance.png" class="methodeImg" />
+																PostFinance e-finance															</label>
+																											<input type="radio" name="paiement-unitaire" id="methodePaiement-5" value="TWINT" class="paiementRadio" alt="TWINT">
+															<label for="methodePaiement-5" class="btnRadio paiementLabel methodePaiement-5">
+																<img src="static/Public/Images/mp/twint.png" class="methodeImg" />
+																TWINT															</label>
+																							</div>
+											<div class="btnsPP mb-0 text-center row justify-content-around hidden" id="paiementRecurrentId">
+												<!-- Liste des méthodes de paiement -->
+																											<input type="radio" name="paiement-recurrent" id="methodePaiement-1" value="PostFinance Card" class="paiementRadio" alt="PostFinance Card">
+															<label for="methodePaiement-1" class="btnRadio paiementLabel methodePaiement-1">
+																<img src="static/Public/Images/mp/pfcard.png" class="methodeImg" />
+																PostFinance Card															</label>
+																											<input type="radio" name="paiement-recurrent" id="methodePaiement-2" value="VISA" class="paiementRadio" alt="VISA">
+															<label for="methodePaiement-2" class="btnRadio paiementLabel methodePaiement-2">
+																<img src="static/Public/Images/mp/visa.png" class="methodeImg" />
+																VISA															</label>
+																											<input type="radio" name="paiement-recurrent" id="methodePaiement-3" value="MasterCard" class="paiementRadio" alt="MasterCard">
+															<label for="methodePaiement-3" class="btnRadio paiementLabel methodePaiement-3">
+																<img src="static/Public/Images/mp/mastercard.png" class="methodeImg" />
+																MasterCard															</label>
+																							</div>
+										</div>
+										<span class="divider"></span>
+										<div class="syntheseDon col-12 col-md-5 text-left pt-md-5">
+											<h5 class="text-secondary font-weight-bold">
+												Zusammenfassung											</h5>
+											<p id="frequence">
+												<span id="unitaireFrequence">Einzel Spende</span>
+												<span id="mensuelFrequence">Monatliche Spende</span>
+											</p>
+											<ol id="detailPanier">
+											</ol>
+											<ol id="detailPanierTotal" class="pl-0">
+												<li class="detailDon row font-weight-bold">
+													<span class="col-8">Gesamt </span>
+													<span class="col-4"><span id="totalDons">90</span> CHF </span>
+
+												</li>
+											</ol>
+										</div>
+										<!-- Bouton Suivant confirmation-->
+									</div>
+
+									<!-- texte info prestataire  -->
+									<div class="row justify-content-center">
+										<div class="col-md-10 col-sm-12 col-xs-12 mt-3">
+											<div class="infoPrestataire bg-info clearfix">
+												<p>Sie werden im Anschluss auf die Seite unseres Partners POSTFINANCE weitergeleitet. Alle unsere Zahlungsvorgänge sind 100% abgesichert. Alle Bankdaten zur Abwicklung sind durch SSL-Protokolle verschlüsselt. Islamic Relief hat keinen Zugang zu Ihren Bankdaten.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 mt-1">
+										<a href="javascript:void(0);" class="disabled btn btn-red btnSuivant btn-large" id="btnConfirmation">
+											<span> ICH SPENDE</span>
+										</a>
+									</div>
+								</div>
+								<div id="formConfirmation" class="hide">
+								</div>
+								<!-- Fin de Liste des méthodes de paiement -->
+								<!-- -------------------------------------------->
+								<!--             FIN ETAPE PAIEMENT 			   -->
+								<!-- -------------------------------------------->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!--fin BLOCK ETAPES DONATION -->
+	<!-- -------------------------------------------->
+	<!--             POPUP TOUS LES PROJETS		   -->
+	<!-- -------------------------------------------->
+	<div class="modal fade modalDonation in" id="modalTousProjets" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modalLabel" style="float:left;">unsere Projekte:</h4>
+					<div class="close" data-dismiss="modal"><img src="static/Public/Images/close.png"></div>
+				</div>
+				<div class="modal-body">
+					<div class="table-responsive">
+						<table style="width:100%;">
+							<tbody>
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td><u>Geben Sie den Betrag neben dem gewünschten Spendenzweck an und klicken Sie auf WEITER</u><br/><br/>Hungersnot</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-1">Jemen</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-2">Afghanistan</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-3">Mali</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-4">Niger</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-4"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-5">Somalia</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-5"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteHungersnot-6">Südsudan</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteHungersnot-6"></td>
+											</tr>
+											<!--fin ligne projet -->
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td>Notfallfonds</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-1">Jemen</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-2">Gaza</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-3">Überschwemmung Bangladesh</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-4">Hungersnot</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-4"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-5">Überschwemmung Pakistan</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-5"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-8">Äthiopien</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-8"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteUrgence-99">Notfallfonds</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteUrgence-99"></td>
+											</tr>
+											<!--fin ligne projet -->
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td>Waisenkinder</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteOrphelin-1">Patenschaft für Waisenkinder</span> : Bitte vermerken Sie bei ihren Kontaktdaten/Anderes Ihre Kontaktnummer oder die Referenznummer des Waisenkindes </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteOrphelin-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteOrphelin-2">Geschenk für Waisenkind</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteOrphelin-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteOrphelin-3">Waisenkasse</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteOrphelin-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td>permanentes Programm</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-1">Zakat el Maal</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-2">Kurban</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-3">Waqf</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-4">Wasser und Brunnen</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-4"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-6">Opferkasse</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-6"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePermanant-7">Adak/Aqiqa (100 CHF)</span> : Notieren Sie den Namen des Kindes in der Rubrik Kontaktdaten/Anderes </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="textePermanant-7"></td>
+											</tr>
+											<!--fin ligne projet -->
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td>Projekte 2022</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-1">Afghanistan</span> : Nahrungsmittel-Nothilfe </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-2">Bangladesch</span> : Dauerhafte Lösungen für den Zugang zu Wasser, Hygiene und Sanitärversorgung </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-3">Albanien</span> : Medizinische Geräte des Bulqiza-Krankenhauses </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-4">Horn von Afrika</span> : Humanitärer Noteinsatz </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-4"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-5">Mazedonien</span> : Erweiterung der Naim Frasheri Grundschule </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-5"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-6">Niger</span> : Ernährungsnotstand </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-6"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-7">Palästina</span> : Trinkwasserversorgung des Al-Shifa-Krankenhauses in Gaza </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-7"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-8">Somalia</span> : Kampf gegen den Hunger </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-8"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-9">Syrien</span> : Zugang zu Bildung für Flüchtlingskinder </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-9"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-10">Albanien</span> : Häusliche Krankenpflege für arme Familien, ältere und behinderte Menschen </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-10"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteProjets22-99">Projekte 2022</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteProjets22-99"></td>
+											</tr>
+											<!--fin ligne projet -->
+																	<!--ligne sous-rubrique texte paragraphe-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<td>andere Spenden</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<!--fin ligne catégorie projet-->
+									<tr style="height:20px;"></tr>
+																				<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteAutre-1">Bankzinsen</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteAutre-1"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteAutre-2">Fidya / Kaffara</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteAutre-2"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteAutre-3">Allgemeiner Fond</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteAutre-3"></td>
+											</tr>
+											<!--fin ligne projet -->
+																			<!--ligne projet -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="texteAutre-4">Zakat Al fitr</span> :  </td>
+												<td style="padding-left: 10px;" width="300"></td>
+												<td></td>
+												<td class="devise">CHF</td>
+												<td class="montantPtp">
+													<input type="number" step placeholder="0" name="montantTP" class="inputMontantPtp" id="texteAutre-4"></td>
+											</tr>
+											<!--fin ligne projet -->
+															</tbody>
+						</table>
+					</div>
+					<h3 class="qurbani-line"></h3>
+					<h3 style="text-align: center;"><strong>Total: &nbsp;<span id="tpTotal">0</span>&nbsp;CHF</strong></h3>
+
+				</div>
+				<!--boutons pop up ts les projets  -->
+				<div class="modal-footer">
+					<button type="button" id="orphan-close-btn" class="btn btn-default" data-dismiss="modal">schliessen</button>
+					<input id="continuerTpId" class="btn btn-red" type="button" name="submit" value="Weiter">
+				</div>
+				<!--boutons pop up ts les projets  -->
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------->
+	<!--           FIN POPUP TOUS LES PROJETS		   -->
+	<!-- -------------------------------------------->
+
+	<!-- -------------------------------------------->
+	<!--             POPUP KURBAN       		   -->
+	<!-- -------------------------------------------->
+
+	<div class="modal fade modalKurban in" id="modalKurban" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modalLabel" style="float:left;">KURBAN 2022</h4>
+					<div class="close" data-dismiss="modal"><img src="static/Public/Images/close.png"></div>
+				</div>
+				<div class="modal-body">
+					<div class="table-responsive">
+						<table style="width:100%;">
+							<tbody>
+																	<!-- ligne zone kurban-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<!-- texte zone kurban -->
+										<td>Gruppe A											: 100											CHF										</td>
+										<!-- fin texte zone kurban -->
+										<!-- texte paragraphe zone kurban -->
+										<input type="hidden" class="zoneId" value="PaysZone1">
+										<input type="hidden" id="zoneTexte-PaysZone1" value="Gruppe A">
+										<td>
+										</td>
+										<!-- fin texte paragraphe zone kurban -->
+										<td class="hidden-xs"></td>
+										<td class="text-center">Anzahl</td>
+										<td class="text-center">Beträge</td>
+									</tr>
+									<!--fin ligne zone kurban-->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-1">Äthiopien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-1" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-1">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-1 sous-total-pays" id="textePaysZone1-1"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-2">Kenia</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-2" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-2">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-2 sous-total-pays" id="textePaysZone1-2"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-3">Malawi</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-3" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-3">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-3 sous-total-pays" id="textePaysZone1-3"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-4">Mali</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-4" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-4">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-4 sous-total-pays" id="textePaysZone1-4"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-5">Niger</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-5" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-5">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-5 sous-total-pays" id="textePaysZone1-5"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-6">Sudan</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-6" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-6">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-6 sous-total-pays" id="textePaysZone1-6"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-7">Somalia</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-7" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-7">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-7 sous-total-pays" id="textePaysZone1-7"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone1" value="100"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone1-8">Bangladesch</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone1-8" value="PaysZone1">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone1" id="textePaysZone1-8">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone1-8 sous-total-pays" id="textePaysZone1-8"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																										<!-- ligne zone kurban-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<!-- texte zone kurban -->
+										<td>Gruppe B											: 130											CHF										</td>
+										<!-- fin texte zone kurban -->
+										<!-- texte paragraphe zone kurban -->
+										<input type="hidden" class="zoneId" value="PaysZone2">
+										<input type="hidden" id="zoneTexte-PaysZone2" value="Gruppe B">
+										<td>
+										</td>
+										<!-- fin texte paragraphe zone kurban -->
+										<td class="hidden-xs"></td>
+										<td class="text-center">Anzahl</td>
+										<td class="text-center">Beträge</td>
+									</tr>
+									<!--fin ligne zone kurban-->
+																				<tr><input type="hidden" id="montantKurban-PaysZone2" value="130"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone2-1">Afghanistan</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone2-1" value="PaysZone2">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone2" id="textePaysZone2-1">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone2-1 sous-total-pays" id="textePaysZone2-1"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone2" value="130"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone2-2">Myanmar Flüchtlinge in Bangladesch</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone2-2" value="PaysZone2">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone2" id="textePaysZone2-2">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone2-2 sous-total-pays" id="textePaysZone2-2"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone2" value="130"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone2-3">Pakistan</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone2-3" value="PaysZone2">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone2" id="textePaysZone2-3">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone2-3 sous-total-pays" id="textePaysZone2-3"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone2" value="130"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone2-4">Süd Sudan</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone2-4" value="PaysZone2">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone2" id="textePaysZone2-4">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone2-4 sous-total-pays" id="textePaysZone2-4"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																										<!-- ligne zone kurban-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<!-- texte zone kurban -->
+										<td>Gruppe C											: 180											CHF										</td>
+										<!-- fin texte zone kurban -->
+										<!-- texte paragraphe zone kurban -->
+										<input type="hidden" class="zoneId" value="PaysZone3">
+										<input type="hidden" id="zoneTexte-PaysZone3" value="Gruppe C">
+										<td>
+										</td>
+										<!-- fin texte paragraphe zone kurban -->
+										<td class="hidden-xs"></td>
+										<td class="text-center">Anzahl</td>
+										<td class="text-center">Beträge</td>
+									</tr>
+									<!--fin ligne zone kurban-->
+																				<tr><input type="hidden" id="montantKurban-PaysZone3" value="180"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone3-2">Südafrika</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone3-2" value="PaysZone3">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone3" id="textePaysZone3-2">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone3-2 sous-total-pays" id="textePaysZone3-2"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone3" value="180"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone3-3">Jemen</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone3-3" value="PaysZone3">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone3" id="textePaysZone3-3">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone3-3 sous-total-pays" id="textePaysZone3-3"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone3" value="180"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone3-4">Türkei</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone3-4" value="PaysZone3">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone3" id="textePaysZone3-4">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone3-4 sous-total-pays" id="textePaysZone3-4"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone3" value="180"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone3-5">Kosovo</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone3-5" value="PaysZone3">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone3" id="textePaysZone3-5">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone3-5 sous-total-pays" id="textePaysZone3-5"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																										<!-- ligne zone kurban-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<!-- texte zone kurban -->
+										<td>Gruppe D											: 230											CHF										</td>
+										<!-- fin texte zone kurban -->
+										<!-- texte paragraphe zone kurban -->
+										<input type="hidden" class="zoneId" value="PaysZone4">
+										<input type="hidden" id="zoneTexte-PaysZone4" value="Gruppe D">
+										<td>
+										</td>
+										<!-- fin texte paragraphe zone kurban -->
+										<td class="hidden-xs"></td>
+										<td class="text-center">Anzahl</td>
+										<td class="text-center">Beträge</td>
+									</tr>
+									<!--fin ligne zone kurban-->
+																				<tr><input type="hidden" id="montantKurban-PaysZone4" value="230"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone4-1">Albanien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone4-1" value="PaysZone4">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone4" id="textePaysZone4-1">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone4-1 sous-total-pays" id="textePaysZone4-1"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone4" value="230"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone4-2">Bosnien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone4-2" value="PaysZone4">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone4" id="textePaysZone4-2">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone4-2 sous-total-pays" id="textePaysZone4-2"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone4" value="230"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone4-3">Mazedonien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone4-3" value="PaysZone4">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone4" id="textePaysZone4-3">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone4-3 sous-total-pays" id="textePaysZone4-3"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone4" value="230"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone4-4">Indonesien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone4-4" value="PaysZone4">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone4" id="textePaysZone4-4">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone4-4 sous-total-pays" id="textePaysZone4-4"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone4" value="230"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone4-5">Syrien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone4-5" value="PaysZone4">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone4" id="textePaysZone4-5">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone4-5 sous-total-pays" id="textePaysZone4-5"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																										<!-- ligne zone kurban-->
+									<tr style="height:20px;"></tr>
+									<tr style="border-bottom: 1px solid #007bb7;padding-top:20px;font-weight:bold;">
+										<!-- texte zone kurban -->
+										<td>Gruppe E											: 400											CHF										</td>
+										<!-- fin texte zone kurban -->
+										<!-- texte paragraphe zone kurban -->
+										<input type="hidden" class="zoneId" value="PaysZone5">
+										<input type="hidden" id="zoneTexte-PaysZone5" value="Gruppe E">
+										<td>
+										</td>
+										<!-- fin texte paragraphe zone kurban -->
+										<td class="hidden-xs"></td>
+										<td class="text-center">Anzahl</td>
+										<td class="text-center">Beträge</td>
+									</tr>
+									<!--fin ligne zone kurban-->
+																				<tr><input type="hidden" id="montantKurban-PaysZone5" value="400"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone5-1">Irak</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone5-1" value="PaysZone5">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone5" id="textePaysZone5-1">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone5-1 sous-total-pays" id="textePaysZone5-1"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone5" value="400"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone5-2">Jordanien</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone5-2" value="PaysZone5">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone5" id="textePaysZone5-2">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone5-2 sous-total-pays" id="textePaysZone5-2"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone5" value="400"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone5-3">Libanon</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone5-3" value="PaysZone5">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone5" id="textePaysZone5-3">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone5-3 sous-total-pays" id="textePaysZone5-3"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone5" value="400"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone5-4">Gaza</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone5-4" value="PaysZone5">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone5" id="textePaysZone5-4">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone5-4 sous-total-pays" id="textePaysZone5-4"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																				<tr><input type="hidden" id="montantKurban-PaysZone5" value="400"> </tr>
+											<!--ligne pays -->
+											<tr class="dmodal-tr">
+												<td class="modal-td"> <span id="textePaysZone5-5">Syrische Flüchtlinge in der Türkei</span> :  </td>
+												<td class="modal-td" width="300">
+													<input type="hidden" id="zoneId-textePaysZone5-5" value="PaysZone5">
+												</td>
+												<td class="devise"> </td>
+												<td class="qteKurban">
+													<input type="number" step="1" min="0" max="9999" placeholder="0" name="pays" class="inputQteKurban PaysZone5" id="textePaysZone5-5">
+												</td>
+												<td class="stp">
+													<span class="sous-total-pays-textePaysZone5-5 sous-total-pays" id="textePaysZone5-5"> 0 </span>
+													CHF												</td>
+												<td></td>
+											</tr>
+											<!--fin ligne pays -->
+																								</tbody>
+						</table>
+					</div>
+					<h3 class="qurbani-line"></h3>
+					<h3 style="text-align: center;"><strong>Gesamtbetrag der Spenden: &nbsp;<span id="totalKurban">0</span>&nbsp;CHF</strong></h3>
+				</div>
+				<!--boutons pop up kurban  -->
+				<div class="modal-footer">
+					<button type="button" id="orphan-close-btn" class="btn btn-default" data-dismiss="modal">Spende abbrechen</button>
+					<input id="validerKurbanId" class="btn btn-red" type="button" name="submit" value="Spende bestätigen">
+				</div>
+				<!--boutons pop up kurban  -->
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------->
+	<!--           FIN POPUP KURBAN       		   -->
+	<!-- -------------------------------------------->
+
+	<!-- -------------------------------------------->
+	<!--             POPUP RGPD          		   -->
+	<!-- -------------------------------------------->
+	<div class="modal fade modalRGPD in" id="modalRGPD" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>Wir verwenden Cookies und ähnliche Technologien, um das Nutzererlebnis auf unseren Webseiten zu verbessern, unseren Datenverkehr zu analysieren, Inhalte und Anzeigen zu personalisieren und Social Media-Funktionen bereitzustellen. Durch die weitere Nutzung dieser Webseite stimmen Sie unserer Verwendung von Cookies und ähnlichen Technologien zu. </p>
+					<input id="delaiRgpd" type="hidden" value='30'>
+					<input id="validerRgpdId" class="btn btn-primary" type="button" value="Hinweis schliessen">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------->
+	<!--            FIN POPUP RGPD          	   -->
+	<!-- -------------------------------------------->
+
+	<!-- -------------------------------------------->
+	<!--            POPUP CONFIRMATION             -->
+	<!-- -------------------------------------------->
+	<div class="modal fade " tabindex="-1" role="dialog" id="confirmationModal" style="margin-top: 200px;">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="background:#b7000075;">
+					<h5 class="modal-title">
+						Information					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="typeDonSpanUnitaire">
+						Sie haben einen Zweck für eine einzelne Spende ausgewählt, möchten Sie uns eher durch eine regelmässige Spende unterstützen?					</p>
+					<p class="typeDonSpanRecurrent">
+						Sie haben einen Zweck für eine monatliche Spende gewählt. Möchten Sie lieber eine Einzelspende machen?					</p>
+					Wenn Sie bestätigen, sollten Sie einen Zweck angeben, der mit dieser Art der Spende übereinstimmt.				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="finaliserCommande">Annulieren</button>
+					<button type="button" class="btn btn-red" id="continuerChoixDon">Weiterfahren</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------->
+	<!--           FIN POPUP CONFIRMATION          -->
+	<!-- -------------------------------------------->
+
+	<!--execution Javascript php -->
+		<!--fin execution javascript -->
+
+	<!-- affichage du message d'incompatibilité navigateur  -->
+	<script type="text/Javascript" src="static/Public/JavaScript/Ie.js"> </script>
+
+</body>
+
+
+<!-- Mirrored from islamic-relief.ch/donation/index.php?lg=de by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Nov 2022 21:49:18 GMT -->
+</html>

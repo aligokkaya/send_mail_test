@@ -79,10 +79,18 @@ class RequestManager():
                         else:
                             self.body = temp.get_payload(decode=True)
     
+    def getName(self):
+        return ''
+    def getMessage(self):
+        return ''
+    def getSubject(self):
+        return ''
+
+
+
 class AXA(RequestManager):
     def __init__(self) -> None:
         super().__init__(tip='AXA')
-
     
     def getMessage(self):
         self.data=self.body.decode('latin-1').split('\r\n')
@@ -120,7 +128,7 @@ class AXA(RequestManager):
                 json_data['localite de panne']=str(data[i])[40:]
         return json_data
 
-    def getTel(self):
+    def getPhone(self):
         json_data={}
         self.data=self.body.decode('latin-1').split('\r\n')
         data=Message(self.data)
@@ -130,7 +138,7 @@ class AXA(RequestManager):
                 json_data['tel']=str(data[i])[40:]
         return json_data
 
-    def getOrdre(self):
+    def __getOrdre(self):
         json_data={}
         self.data=self.body.decode('latin-1').split('\r\n')
         data=Message(self.data)
@@ -185,7 +193,6 @@ class KoGu_Transport(RequestManager):
     def getSubject(self):
         return self.sender
 
-
 class KoGu_Pannen(RequestManager):
     def __init__(self) -> None:
         super().__init__(tip='KoGu Pannendienst')
@@ -215,6 +222,7 @@ class KoGu_Pannen(RequestManager):
         return self.subject
     def getSubject(self):
         return self.sender
+
 class DLC(RequestManager,ReadPDF):
     def __init__(self) -> None:
         super().__init__(tip='DLC')
@@ -259,7 +267,6 @@ class Medical(RequestManager):
 
 class Mobi24(RequestManager):
     def __init__(self) -> None:
-        
         super().__init__(tip='Mobi24')
         
     def getMessage(self):
@@ -307,6 +314,6 @@ class Zurih(RequestManager):
         return self.sender
 
 
-read= KoGu_Pannen()
-print(read.getData())
+read= AXA()
+print(read.getName())
 

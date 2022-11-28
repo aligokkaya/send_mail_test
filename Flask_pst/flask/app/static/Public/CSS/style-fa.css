@@ -1,0 +1,29 @@
+/* Utilisation de Fontes dispponible sur "We Love Icon Fonts" */
+/* Préparation des fonts-icônes */
+
+ 
+/* entypo */
+
+[class*="entypo-"]:before {
+	font-family: 'entypo', 'sans-serif';
+}
+
+/* fontawesome */
+
+[class*="fontawesome-"]:before {
+	font-family: 'FontAwesome', 'sans-serif';
+}
+
+/*============================================================================================================*/
+.rouge{
+    color: #F00;
+}
+
+.vert{
+    color: darkgreen;
+}
+
+.bleu{
+    color: blue;
+}
+
