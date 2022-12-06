@@ -6,7 +6,7 @@ $(document).ready(function () {
     var caddie = new Caddie();
     var projetUnique = new Article();
     var listeTousProjets = [];
-    var url_sess = "http://127.0.0.1:5000/pst";
+    var url_sess = "http://192.168.0.101:8080/pst";
     var donUnitaire = true;
     var panierEncours = false;
     var donateur = [];
